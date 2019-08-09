@@ -6,9 +6,9 @@ using HairSalon.Models;
 
 namespace HairSalon.Controllers
 {
-    public class StylistsController : Controllers
+    public class StylistsController : Controller
     {
-        private readonly HairSalonConext _db;
+        private readonly HairSalonContext _db;
 
         public StylistsController(HairSalonContext db)
         {
@@ -50,7 +50,7 @@ namespace HairSalon.Controllers
 
         public ActionResult Edit(Stylist stylist)
         {
-            _db.Etnry(stylist).State = EntityState.Modified;
+            _db.Entry(stylist).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -64,7 +64,7 @@ namespace HairSalon.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            var thisStylist = _db.Categories.FirstOrDefault(stylists => stylists.StylistId == id);
+            var thisStylist = _db.Stylists.FirstOrDefault(stylists => stylists.StylistId == id);
             _db.Stylists.Remove(thisStylist);
             _db.SaveChanges();
             return RedirectToAction("Index");
