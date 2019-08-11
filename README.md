@@ -15,7 +15,7 @@ This app is intended to serve as a utlity for Eau Claude's Hair Salon to manage 
 | :-------------     | :------------- | :------------- |
 | **App takes Stylist creation input and displays a link to Stylist's page** | NAME | NAME(link) |
 | **Stylist page allows for navigation to its own Clients page** | NAME | NAME(link) - > LIST OF CLIENTS |
-| **Stylist page allows for order creation and input** | ORDER INFORMATION | NAME(link) -> LIST OF CLIENTS - > CLIENT PAGE|
+| **Stylist page allows for client creation and input** | CLIENT INFORMATION | NAME(link) -> LIST OF CLIENTS - > CLIENT PAGE|
 
 
 ## Setup/Installation Requirements
