@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HairSalon.Controllers
 {
@@ -18,6 +19,7 @@ namespace HairSalon.Controllers
         public ActionResult Index()
         {
             List<Stylist> model = _db.Stylists.ToList();
+            ViewBag.ClientName = _db.Clients;
             return View(model);
         }
 

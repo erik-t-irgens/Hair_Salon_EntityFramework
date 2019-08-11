@@ -3,10 +3,17 @@
 }
 
 @model HairSalon.Models.Client
-
+<div class="card bg-dark">
+    <div class="card-header">
 <h2>Client Details</h2>
-<hr />
+</div>
+<div class="card-body">
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+</div>
+<div class="card-footer">
+
+<button class="btn btn-outline-info">@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</button>
+<button class="btn btn-outline-warning">@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</button>
+<button  class="btn btn-outline-secondary">@Html.ActionLink("Back to list", "Index")</button>
+</div>
+</div>

@@ -4,9 +4,20 @@
 
 @model HairSalon.Models.Stylist
 
-<h2>Stylist Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-<p>@Html.ActionLink("Back to list", "Index")</p>
-<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})</p>
-<p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})</p>
+<div class="card bg-dark">
+  <div class="card-header">
+  <h2>Stylist Details</h2>
+</div>
+
+<div class="card-body">
+  <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+ </div>
+
+
+ 
+<div class="card-footer">
+  <button class="btn btn-outline-success">@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId})</button>
+  <button class="btn btn-outline-warning">@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId})</button>
+  <a class="btn btn-outline-secondary" href="/Stylists">Back</a>
+  </div>
+  </div>

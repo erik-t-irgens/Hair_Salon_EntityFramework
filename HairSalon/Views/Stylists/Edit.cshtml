@@ -2,19 +2,26 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Stylist
-
+<div class="card bg-dark">
+  <div class="card-header">
 <h2>Edit</h2>
+</div>
 
-<h4>Edit this task: @Html.DisplayFor(model => model.Name)</h4>
+<div class="card-body">
+
+<h4>Editting this stylist: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.StylistId)
+    @Html.HiddenFor(model => model.StylistId)<br>
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Name)<br>
+    @Html.EditorFor(model => model.Name)<hr>
 
-    <input type="submit" value="Save" />
+    <button type="submit" class="btn btn-outline-success" value="Save" >Save</button>
 }
-
-<p>@Html.ActionLink("Back to Stylists", "Index")</p>
+</div>
+<div class="card-footer">
+  <a class="btn btn-outline-secondary" href="/Stylists">Back</a>
+  </div>
+</div>

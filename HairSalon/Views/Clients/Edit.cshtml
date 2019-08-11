@@ -3,22 +3,27 @@
 }
 
 @model HairSalon.Models.Client
-
+<div class="card bg-dark">
+    <div class="card-header">
 <h2>Edit</h2>
-
-<h4>Edit this task: @Html.DisplayFor(model => model.Name)</h4>
+</div>
+<div class="card-body">
+<h4>Editting this client: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.ClientId)
+    @Html.HiddenFor(model => model.ClientId)<br>
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Name)<br>
+    @Html.EditorFor(model => model.Name)<br>
 
-    @Html.LabelFor(model => model.Stylist)
-    @Html.DropDownList("StylistId")
+    @Html.LabelFor(model => model.Stylist)<br>
+    @Html.DropDownList("StylistId")<br>
 
-    <input type="submit" value="Save" />
+    <button type="submit" class="btn btn-outline-success" value="Save" >Save</button>
 }
-
-<p>@Html.ActionLink("Back to List", "Index")</p>
+</div>
+<div class="card-footer">
+<button class="btn btn-outline-secondary">@Html.ActionLink("Back to List", "Index")</button>
+</div>
+</div>

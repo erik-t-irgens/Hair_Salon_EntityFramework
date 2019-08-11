@@ -3,13 +3,19 @@
 }
 
 @model HairSalon.Models.Stylist
-
+<div class="card bg-dark">
+  <div class="card-header">
 <h2>Are you sure you want to delete this stylist?</h2>
-
+</div>
+<div class="card-body">
 @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(Model => Model.Name)
+<hr>
 @using (Html.BeginForm())
 {
-    <input type="submit" value="delete"/>
+    <button type="submit" class="btn btn-outline-warning" value="delete">Delete</button>
 }
-
-@Html.ActionLink("Back to Stylists", "Index")
+</div>
+<div class="card-footer">
+<a class="btn btn-outline-secondary" href="/Stylists">Back</a>
+</div>
+</div>
