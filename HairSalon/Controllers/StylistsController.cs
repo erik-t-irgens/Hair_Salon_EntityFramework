@@ -39,6 +39,11 @@ namespace HairSalon.Controllers
         public ActionResult Details(int id)
         {
             Stylist thisStylist = _db.Stylists.FirstOrDefault(stylists => stylists.StylistId == id);
+            ViewBag.thisStylistsClients = _db.Clients.Where(client => client.StylistId == id);
+            // This is an alternative LINQ query syntax that's supposed to look like SQL
+            // ViewBag.thisStylistsClients = from c in _db.Clients
+            //                                 where c.StylistId == id
+            //                                 select c;
             return View(thisStylist);
         }
 
